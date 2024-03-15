@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'hello_msg' | trans }} {{ prenom }}!{% endblock %}
+
+{% block body %}
+    <nav>
+        <a href="{{ path('app_language', {'locale': 'fr'}) }}" data-turbo="false">FR</a>
+        &nbsp;|&nbsp;
+        <a href="{{ path('app_language', {'locale': 'en'}) }}" data-turbo="false">EN</a>
+    </nav>
+
+    <hr/>
+
+    <h1>{{ 'hello_msg' | trans }} {{ prenom }}</h1>
+{% endblock %}
